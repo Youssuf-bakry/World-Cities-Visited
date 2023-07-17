@@ -1,0 +1,64 @@
+{
+  "cities": [
+    {
+      "cityName": "القدس",
+      "country": "فلسطين",
+      "emoji": "🇵🇸",
+      "date": "2027-10-31T15:59:59.138Z",
+      "notes": "My favorite city so far!",
+      "position": {
+        "lat": 31.728371,
+        "lng": 35.040161
+      },
+      "id": 5646541653
+    },
+    {
+      "cityName": "Madrid",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2027-07-15T08:22:53.976Z",
+      "notes": "",
+      "position": {
+        "lat": 40.46635901755316,
+        "lng": -3.7133789062500004
+      },
+      "id": 17806751
+    },
+    {
+      "cityName": "Medina",
+      "country": "Saudi Arabia",
+      "date": "2023-07-16T21:35:16.306Z",
+      "notes": "المدينة",
+      "emoji": "🇸🇦",
+      "position": {
+        "lat": "24.157991764621954",
+        "lng": "39.40288678510777"
+      },
+      "id": 5646541655
+    },
+    {
+      "cityName": "Riyadh",
+      "country": "Saudi Arabia",
+      "date": "2023-07-17T11:36:33.472Z",
+      "notes": "",
+      "emoji": "🇸🇦",
+      "position": {
+        "lat": "24.512802517837038",
+        "lng": "46.62414785204135"
+      },
+      "id": 5646541656
+    },
+    {
+      "cityName": "Cairo",
+      "country": "Egypt",
+      "date": "2023-07-17T22:09:32.428Z",
+      "notes": "fhdjfh",
+      "emoji": "🇪🇬",
+      "position": {
+        "lat": "29.941406463660837",
+        "lng": "31.33409125151595"
+      },
+      "id": 5646541657
+    }
+  ]
+}
