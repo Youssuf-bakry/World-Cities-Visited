@@ -1,4 +1,4 @@
-import { createContext, useContext, useReducer } from "react";
+import { createContext, useCallback, useContext, useReducer } from "react";
 import { useEffect } from "react";
 
 const base_Url = "http://localhost:9000";
@@ -62,18 +62,25 @@ function CitiesProvider({ children }) {
     fetchCities();
   }, []);
 
-  async function getCurrentCity(id) {
-    //an excellent trick for maximum performance to avoid refetching the api wihout any need
-    if (currentCity.id === Number(id)) return;
-    try {
-      dispatch({ type: "loading" });
-      const res = await fetch(`${base_Url}/cities/${id}`);
-      const data = await res.json();
-      dispatch({ type: "city/loaded", payload: data });
-    } catch (err) {
-      dispatch({ type: "error", payload: "Error fetching current city" + err });
-    }
-  }
+  const getCurrentCity = useCallback(
+    async function getCurrentCity(id) {
+      //an excellent trick for maximum performance to avoid refetching the api wihout any need
+      if (currentCity.id === Number(id)) return;
+      try {
+        dispatch({ type: "loading" });
+        const res = await fetch(`${base_Url}/cities/${id}`);
+        const data = await res.json();
+        dispatch({ type: "city/loaded", payload: data });
+      } catch (err) {
+        dispatch({
+          type: "error",
+          payload: "Error fetching current city" + err,
+        });
+      }
+    },
+    [currentCity.id]
+  );
+
   async function addCity(newCity) {
     try {
       dispatch({ type: "loading" });

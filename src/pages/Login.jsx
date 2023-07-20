@@ -15,7 +15,7 @@ export default function Login() {
 
   useEffect(() => {
     if (isAuthinticated === true) navigate("/app", { replace: true });
-  }, [isAuthinticated]);
+  }, [isAuthinticated, navigate]);
 
   function handleLogin(e) {
     e.preventDefault();
